@@ -33,8 +33,9 @@ def get_url():
     user = settings.POSTGRES_USER
     password = settings.POSTGRES_PASSWORD
     server = settings.POSTGRES_SERVER
+    port = settings.POSTGRES_PORT
     db = settings.POSTGRES_DB
-    return f"postgresql://{user}:{password}@{server}/{db}"
+    return f"postgresql://{user}:{password}@{server}:{port}/{db}"
 
 
 def run_migrations_offline():
